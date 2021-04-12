@@ -1,0 +1,57 @@
+{
+  "type": "form",
+  "components": [
+    {
+      "type": "chart",
+      "label": "Top 5 Population",
+      "key": "chart",
+      "chart": {
+        "type": "bar",
+        "mode": "top",
+        "limit": 5,
+        "data": {
+          "limit": 5,
+          "sort": "desc",
+          "datasets": [{
+            "label": "Population",
+            "dataSrc": "url",
+            "data": {
+              "values": [],
+              "json": "",
+              "url": "https://restcountries.eu/rest/v2/currency/eur?fields=name;population",
+              "resource": "",
+              "custom": ""
+            },
+            "valueProperty": "population",
+            "labelProperty": "name",
+            "filter": "",
+            "selectFields": "",
+            "authenticate": false,
+            "theme": "custom",
+            "backgroundColor": "rgba(54, 162, 235, 0.2)",
+            "borderColor": "rgba(54, 162, 235, 1)",
+            "borderWidth": 1
+          }]
+        }
+      },
+      "refreshOn": ""
+    },
+    {
+      "autofocus": false,
+      "input": true,
+      "label": "Submit",
+      "tableView": false,
+      "key": "submit",
+      "size": "md",
+      "leftIcon": "",
+      "rightIcon": "",
+      "block": false,
+      "action": "submit",
+      "disableOnInvalid": false,
+      "theme": "primary",
+      "type": "button"
+    }
+  ],
+  "title": "Custom",
+  "display": "form"
+}
